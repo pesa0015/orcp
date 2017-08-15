@@ -1,0 +1,41 @@
+{
+    "key": "group_54a0715817d01",
+    "title": "Books Meta",
+    "fields": [
+        {
+            "key": "field_54a0715de0bb5",
+            "label": "Book Image",
+            "name": "book_image",
+            "prefix": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "orcp_books"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1423126345,
+    "local": "json"
+}

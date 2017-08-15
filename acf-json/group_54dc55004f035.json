@@ -1,0 +1,502 @@
+{
+    "key": "group_54dc55004f035",
+    "title": "Color Schemes",
+    "fields": [
+        {
+            "key": "field_54dc5518bcb5a",
+            "label": "Title Information",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The title above will only be used for administrative purposes to that you can find and reference this color scheme later in the admin.",
+            "esc_html": 0
+        },
+        {
+            "key": "field_54dc5536bcb5b",
+            "label": "Structure",
+            "name": "color_scheme_structure",
+            "type": "repeater",
+            "instructions": "Put together the structure of the page here by selecting sections and assigning them to sections on the page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Section",
+            "sub_fields": [
+                {
+                    "key": "field_551e7c4b4125e",
+                    "label": "New Section",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Here starts a new section.",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_54dc56e8c89a0",
+                    "label": "Spacer Section?",
+                    "name": "color_scheme_spacer",
+                    "type": "true_false",
+                    "instructions": "Spacer sections are loaded from the sections content.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Is this a spacer section?",
+                    "default_value": 0
+                },
+                {
+                    "key": "field_54dc5553bcb5c",
+                    "label": "Fixed Position",
+                    "name": "color_scheme_position",
+                    "type": "taxonomy",
+                    "instructions": "Since this is not a spacer section, please select which fixed position should be loaded instead.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_54dc56e8c89a0",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "orcp_positions",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "load_save_terms": 0,
+                    "return_format": "object",
+                    "multiple": 0,
+                    "add_term": 1,
+                    "load_terms": 0,
+                    "save_terms": 0
+                },
+                {
+                    "key": "field_54dc557abcb5d",
+                    "label": "Section",
+                    "name": "color_scheme_section",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_54dc56e8c89a0",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "orcp_sections"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
+                    "key": "field_551e798554b51",
+                    "label": "Background Type",
+                    "name": "color_scheme_background_type",
+                    "type": "radio",
+                    "instructions": "What type of background should this section use?",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "color": "Color",
+                        "image": "Image"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "color",
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_551e791fe55e2",
+                    "label": "Background Image(s)",
+                    "name": "color_scheme_background_images",
+                    "type": "gallery",
+                    "instructions": "Upload one or more background images for this section.\r\nUsing the vector svg format is highly recommended for good scaling and resolution properties.\r\nIf multiple images are uploaded, they will be randomized.\r\n\r\nPlease also specify a fallback and background color below.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_551e798554b51",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": 1,
+                    "max": "",
+                    "preview_size": "thumbnail",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "library": "all"
+                },
+                {
+                    "key": "field_54dc56bf89dd3",
+                    "label": "Background Color",
+                    "name": "color_scheme_bgcolor",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_551e798554b51",
+                                "operator": "==",
+                                "value": "color"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_54dc576ac89a2",
+                    "label": "Text Color",
+                    "name": "color_scheme_text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_54dc5a0f8402e",
+                    "label": "Header Style",
+                    "name": "color_scheme_header_style",
+                    "type": "select",
+                    "instructions": "Please select which header style this section should have.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "light": "Light (for dark backgrounds)",
+                        "dark": "Dark (for light backgrounds)",
+                        "custom": "Custom",
+                        "none": "Don't show header"
+                    },
+                    "default_value": {
+                        "": ""
+                    },
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_554c57afcadd3",
+                    "label": "Header Links Color",
+                    "name": "color_scheme_header_links_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_54dc5a0f8402e",
+                                "operator": "==",
+                                "value": "custom"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_554c57c2cadd4",
+                    "label": "Header Menu Sprite",
+                    "name": "color_scheme_header_menu_sprite",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_54dc5a0f8402e",
+                                "operator": "==",
+                                "value": "custom"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_554c5753cadd2",
+                    "label": "Logo Color",
+                    "name": "color_scheme_logo_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_54dc5a0f8402e",
+                                "operator": "==",
+                                "value": "custom"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_551e7c06cf0cc",
+                    "label": "Link",
+                    "name": "color_scheme_section_link",
+                    "type": "text",
+                    "instructions": "If used, the entire full screen section will be a link to the place you enter here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_551e863ff4076",
+                    "label": "Border Type",
+                    "name": "color_scheme_border_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_54dc56e8c89a0",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "square": "Square",
+                        "circle": "Circle",
+                        "none": "None"
+                    },
+                    "default_value": {
+                        "square": "square"
+                    },
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                }
+            ]
+        },
+        {
+            "key": "field_55e86ad5d8899",
+            "label": "Floating Illusions Background Color",
+            "name": "color_scheme_floating_illusions_bg",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_560b98a95d30d",
+            "label": "Floating Illusions Text Color",
+            "name": "color_scheme_floating_illusions_text",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_55e86ae9d889a",
+            "label": "Facebook Background Color",
+            "name": "color_scheme_facebook_bg",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_55e86b0ad889b",
+            "label": "Instagram Background Color",
+            "name": "color_scheme_instagram_bg",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_55e86bb4d889c",
+            "label": "Outlook Decoding Background Color",
+            "name": "color_scheme_outlook_decoding_bg",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_560b98b55d30e",
+            "label": "Outlook Decoding Text Color",
+            "name": "color_scheme_outlook_decoding_text",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "orcp_color_scheme"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1443600574
+}

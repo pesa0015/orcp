@@ -1,0 +1,38 @@
+{
+    "key": "group_551e9a0d4e0bf",
+    "title": "Color Meta",
+    "fields": [
+        {
+            "key": "field_551e9a2156c10",
+            "label": "Color Code",
+            "name": "variation_color_code",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "pa_color"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1439467371,
+    "local": "json"
+}

@@ -1,0 +1,15 @@
+/*
+Theme Name:         O.R.C.P Theme
+Theme URI:          http://www.bernskioldmedia.com
+Description:        Custom WordPress theme for O.R.C.P.
+Version:            1.0.2
+Author:             Bernskiold Media
+Author URI:         http://www.bernskioldmedia.com/
+
+License:            MIT License
+License URI:        http://opensource.org/licenses/MIT
+
+The stylesheet file is used as a placeholder to keep WordPress happy.
+All styles are written in SASS (see assets/sass directory) and saved and minified in the assets/css folder.
+Styles are included via core/functions/scripts-styles.php
+*/

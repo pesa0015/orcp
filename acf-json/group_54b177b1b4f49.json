@@ -1,0 +1,41 @@
+{
+    "key": "group_54b177b1b4f49",
+    "title": "Checkout",
+    "fields": [
+        {
+            "key": "field_54b177ed4ed48",
+            "label": "1: Share and Receive",
+            "name": "cf-checkout1",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "24"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1439467371,
+    "local": "json"
+}

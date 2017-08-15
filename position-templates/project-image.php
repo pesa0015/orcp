@@ -1,0 +1,1 @@
+<section class="section" id="section-project-image" <?php do_action( 'section_start_tag', $section, $color_scheme ); ?> data-interchange="[<?php echo $project_image_mobile['url']; ?>, (default)], [<?php echo $project_image['url']; ?>, (medium-up)]" data-anchor="project-image"></section>

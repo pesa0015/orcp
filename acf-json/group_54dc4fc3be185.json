@@ -1,0 +1,76 @@
+{
+    "key": "group_54dc4fc3be185",
+    "title": "Section Meta",
+    "fields": [
+        {
+            "key": "field_54dc52a79dd54",
+            "label": "Title Information",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The title above is just for administrational purposes so that you can easily find and reference this section. Use a naming convention that makes sense to you.",
+            "esc_html": 0
+        },
+        {
+            "key": "field_54ddc8675ff1e",
+            "label": "Navigation ID",
+            "name": "section_nav_id",
+            "type": "text",
+            "instructions": "Using this reference ID you can link to this section of the page in the navigation.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54dc50ebaf6bb",
+            "label": "Active?",
+            "name": "section_active",
+            "type": "true_false",
+            "instructions": "If this is not checked, this section will not show up on the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Is this section active?",
+            "default_value": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "orcp_sections"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1439467372,
+    "local": "json"
+}
