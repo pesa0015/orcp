@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		autoprefixer: {
          dist: {
             files: {
-               'assets/css/layout.css': 'assets/css/layout.css'
+               'assets/css/style.css': 'assets/css/style.css'
             }
          }
       },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 					// sourcemap: true,
 				},
 				files: {
-					'assets/css/layout.css': 'assets/scss/layout.scss'
+					'assets/css/style.css': 'assets/scss/layout.scss'
 				}
 			}
 		},
