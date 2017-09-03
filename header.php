@@ -46,7 +46,7 @@ img.emoji {
     padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='layout-css'  href='<?=get_stylesheet_directory_uri(); ?>/assets/css/layout.css' type='text/css' media='all' />
+<link rel='stylesheet' id='layout-css'  href='<?=get_stylesheet_directory_uri(); ?>/assets/css/style.css' type='text/css' media='all' />
 <!-- <link rel='stylesheet' id='extra-css'  href='<?=get_stylesheet_directory_uri(); ?>/assets/css/build-extra.css' type='text/css' media='all' /> -->
 <link rel='stylesheet' id='flexslider-css'  href='http://www.o-r-c-p.com/wp-content/themes/orcp/assets/css/flexslider.css' type='text/css' media='all' />
 <link rel='stylesheet' id='google-font-droid-serif-css'  href='//fonts.googleapis.com/css?family=Droid+Serif%3A400%2C700&#038;ver=4.3.8' type='text/css' media='all' />
