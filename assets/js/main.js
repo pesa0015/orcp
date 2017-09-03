@@ -52,7 +52,8 @@ var mobile = isMobile();
 //         // }, 1010);
 //     }
 // });
-document.getElementById('section-intro').onclick = function(e) {
+if (document.contains(document.getElementById('section-intro'))) {
+  document.getElementById('section-intro').onclick = function(e) {
     jQuery('.product-slide').attr('class', 'product-slide');
     setTimeout(function(){
         document.getElementById('swipebox-close').onclick = function() {
@@ -65,7 +66,8 @@ document.getElementById('section-intro').onclick = function(e) {
     //     if (firstImage === secondImage) {
     //         jQuery('.slide.floating-illusions.current').next().remove();
     //     }
-};
+  };
+}
     // if (!mobile)
     //     return false;
 
@@ -268,17 +270,17 @@ jQuery(function() {
 
     if(jQuery.inArray(selectVal, EUCountries) === -1) {
 
-      var checkoutNotice = '<section class="split-screen-container checkout-notice-container">
-        <div class="split-screen-left bg-binary"></div>
-        <div class="split-screen-right checkout-notice-wrapper">
-          <div class="split-screen-body checkout-notice">
-            <div class="split-screen-close">
-                <a href="#" class="close-button"><img src="' + orcp.themeurl + '/assets/images/flex/close-button.svg" class="iconic" id="cart-error-close-img" width="36" height="36" alt="Close"></a>
-            </div>
-            ' + orcp.vatText + '
-          </div>
-        </div>
-      </section>';
+      var checkoutNotice = '<section class="split-screen-container checkout-notice-container">'
+        + '<div class="split-screen-left bg-binary"></div>'
+        + '<div class="split-screen-right checkout-notice-wrapper">'
+          + '<div class="split-screen-body checkout-notice">'
+            + '<div class="split-screen-close">'
+                + '<a href="#" class="close-button"><img src="' + orcp.themeurl + '/assets/images/flex/close-button.svg" class="iconic" id="cart-error-close-img" width="36" height="36" alt="Close"></a>'
+            + '</div>'
+            + orcp.vatText
+          '</div>'
+        + '</div>'
+      + '</section>';
 
       jQuery('body').append(checkoutNotice);
 
@@ -449,17 +451,17 @@ jQuery('.product-item-actions-cart').click(function(e) {
     // Add error message to body
     if ( jQuery('#cart-error').length == 0 ) {
 
-      var errorDiv = '<section class="split-screen-container cart-error-container">
-        <div class="split-screen-left bg-binary"></div>
-        <div class="split-screen-right cart-error-wrapper">
-          <div class="split-screen-body cart-error">
-            <div class="split-screen-close">
-                <a href="#" class="close-button"><img src="' + orcp.themeurl + '/assets/images/flex/close-button.svg" class="iconic" id="cart-error-close-img" width="36" height="36" alt="Close"></a>
-            </div>
-            <p>Please select a size before adding the product.</p>
-          </div>
-        </div>
-      </section>';
+      var errorDiv = '<section class="split-screen-container cart-error-container">'
+        + '<div class="split-screen-left bg-binary"></div>'
+        + '<div class="split-screen-right cart-error-wrapper">'
+          + '<div class="split-screen-body cart-error">'
+            + '<div class="split-screen-close">'
+                + '<a href="#" class="close-button"><img src="' + orcp.themeurl + '/assets/images/flex/close-button.svg" class="iconic" id="cart-error-close-img" width="36" height="36" alt="Close"></a>'
+            + '</div>'
+            + '<p>Please select a size before adding the product.</p>'
+          + '</div>'
+        + '</div>'
+      + '</section>';
 
       jQuery('body').append(errorDiv);
 
@@ -1157,17 +1159,17 @@ jQuery(window).load(function() {
           jQuery('#orcp-newsletter-subscribe').html('');
         }
 
-        var checkoutNotice = '<section class="split-screen-container newsletter-notice-container">
-          <div class="split-screen-left newsletter-notice-left bg-binary"></div>
-          <div class="split-screen-right newsletter-notice-wrapper">
-            <div class="split-screen-body newsletter-notice">
-              <div class="split-screen-close newletter-notice-close">
-                  <a href="#" class="close-button"><img src="' + orcp.themeurl + '/assets/images/flex/close-button.svg" class="iconic" id="cart-error-close-img" width="36" height="36" alt="Close"></a>
-              </div>
-              <p>' + parsedResponse.message + '</p>
-            </div>
-          </div>
-        </section>';
+        var checkoutNotice = '<section class="split-screen-container newsletter-notice-container">'
+          + '<div class="split-screen-left newsletter-notice-left bg-binary"></div>'
+          + '<div class="split-screen-right newsletter-notice-wrapper">'
+            + '<div class="split-screen-body newsletter-notice">'
+              + '<div class="split-screen-close newletter-notice-close">'
+                  + '<a href="#" class="close-button"><img src="' + orcp.themeurl + '/assets/images/flex/close-button.svg" class="iconic" id="cart-error-close-img" width="36" height="36" alt="Close"></a>'
+              + '</div>'
+              + '<p>' + parsedResponse.message + '</p>'
+            + '</div>'
+          + '</div>'
+        + '</section>';
 
         jQuery('body').append(checkoutNotice);
 
@@ -1269,17 +1271,17 @@ jQuery(window).load(function() {
   jQuery('.footer-details-logo img').click(function(e) {
     e.preventDefault();
 
-    var customText = '<section class="split-screen-container custom-text-container">
-      <div class="split-screen-left custom-text-left bg-binary"></div>
-      <div class="split-screen-right custom-text-wrapper">
-        <div class="split-screen-body custom-text">
-          <div class="split-screen-close custom-text-close">
-              <a href="#" class="close-button"><img src="' + orcp.themeurl + '/assets/images/flex/close-button.svg" class="iconic" id="cart-error-close-img" width="36" height="36" alt="Close"></a>
-          </div>
-          <p>' + orcp.customText + '</p>
-        </div>
-      </div>
-    </section>';
+    var customText = '<section class="split-screen-container custom-text-container">'
+      + '<div class="split-screen-left custom-text-left bg-binary"></div>'
+      + '<div class="split-screen-right custom-text-wrapper">'
+        + '<div class="split-screen-body custom-text">'
+          + '<div class="split-screen-close custom-text-close">'
+              + '<a href="#" class="close-button"><img src="' + orcp.themeurl + '/assets/images/flex/close-button.svg" class="iconic" id="cart-error-close-img" width="36" height="36" alt="Close"></a>'
+          + '</div>'
+          + '<p>' + orcp.customText + '</p>'
+        + '</div>'
+      + '</div>'
+    + '</section>';
 
     jQuery('body').append(customText);
 
