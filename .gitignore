@@ -1,5 +1,6 @@
 /node_modules
 /.sass-cache
 *.DS_Store
+*.min.js
 /assets/css/style.css
 /assets/css/style.css.map
