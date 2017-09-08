@@ -361,7 +361,7 @@ if ( ! function_exists( 'orcp_the_site_footer' ) ) :
 
             <footer class="site-footer">
                 <ul class="footer-details">
-                    <li>&copy; <?php _e( 'O.R.C.P AB', 'orcp' ); ?></li>
+                    <li><?php _e( 'O.R.C.P', 'orcp' ); ?> &copy; <?php echo date('Y'); ?></li>
                     <li><?php _e( 'all rights reserved', 'orcp' ); ?></li>
                     <li><a href="<?php echo get_permalink( get_option( 'woocommerce_terms_page_id' ) ); ?>" class="no-link"><?php _e( 'terms & conditions', 'orcp' ); ?></a></li>
                     <li><a href="mailto:<?php _e( 'general@o-r-c-p.com', 'orcp' ); ?>" class="no-link"><?php _e( 'general@o-r-c-p.com', 'orcp' ); ?></a></li>
