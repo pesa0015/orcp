@@ -506,6 +506,20 @@ if ( ! function_exists( 'orcp_prefix_load_books' ) ) :
 
 endif;
 
+    add_action( 'wp_ajax_nopriv_load-custom-text', 'orcp_custom_text' );
+    add_action( 'wp_ajax_load-custom-text', 'orcp_custom_text' );
+
+if ( ! function_exists( 'orcp_custom_text' ) ) :
+
+    function orcp_custom_text () {
+        $customText = get_field('orcp_custom_text', 'option');
+
+        echo $customText;
+        die();
+    }
+
+endif;
+
 if ( ! function_exists( 'orcp_prefix_load_grid' ) ) :
 
 	function orcp_prefix_load_grid () {

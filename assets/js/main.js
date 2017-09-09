@@ -910,6 +910,23 @@ jQuery(function() {
   }
 
   /**
+   * Load custom text
+   */
+  window.custom_text = function(){
+    // Run the AJAX request
+    jQuery.ajax({
+      type: 'POST',
+      url: orcp.ajaxurl,
+      data: {
+        "action": "load-custom-text"
+      },
+      success: function(data) {
+        orcp.customText = data;
+      }
+    });
+  }
+
+  /**
    * Load the Grid Section
    */
   window.grid_section_ajax_get = function(newActiveProjNo){
@@ -1263,6 +1280,8 @@ jQuery(window).load(function() {
  * Custom Text on Logo Click
  */
 jQuery(window).load(function() {
+
+    custom_text();
 
   jQuery('.footer-details-logo img').click(function(e) {
     e.preventDefault();
