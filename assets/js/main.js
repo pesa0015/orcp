@@ -926,12 +926,8 @@ jQuery(function() {
         colorScheme: colorScheme
       },
       success: function(grid_section) {
-        var facebook = '<a href="#" class="facebook-box">';
-        var instagram = '<a href="#" class="instagram-box">';
 
-        var gridSection = grid_section.replace(/<a href="http:\/\/www.o-r-c-p.com\/" class="facebook-box" target="_blank">/gi, facebook).replace(/<a href="http:\/\/www.o-r-c-p.com\/" class="instagram-box" target="_blank">/gi, instagram);
-        var gridSection = gridSection.replace(/Episode No.1/, 'Framework');
-        var gridSection = gridSection.replace(/Volume No.1/, 'Blueprint');
+        var gridSection = grid_section;
 
         var gridSectionHeight = jQuery('#grid-section').height();
 

@@ -532,13 +532,15 @@ if ( ! function_exists( 'orcp_prefix_load_grid' ) ) :
 						<section class="grid-section-item" style="background: <?php the_field( 'color_scheme_floating_illusions_bg', $color_scheme_id ); ?>; color: <?php the_field( 'color_scheme_floating_illusions_text', $color_scheme_id ); ?>;">
 							<div class="grid-inner">
 								<?php /*<h2 class="uppercase section-title"><?php _e( 'Floating Illusions', 'orcp' ); ?></h2><br>*/ ?>
-								<p id="framework-no-1" class="section-description"><?php printf( __( 'Episode No.%s', 'orcp' ), $active_grid_project_no ); ?></p>
+								<p class="section-description">
+                                    <span id="framework-no-1"><?php printf( __( 'FRAMEWORK NO.1', 'orcp' ), $active_grid_project_no ); ?></span>
+                                </p>
 							</div>
 						</section>
 					</a>
 				</div>
 				<div class="small-12 columns">
-					<a href="<?php the_field( 'orcp_facebook_link', 'option' ); ?>" class="facebook-box" target="_blank">
+					<a href="#" class="facebook-box">
 						<section class="grid-section-item" style="background: <?php the_field( 'color_scheme_facebook_bg', $color_scheme_id ); ?>;"></section>
 					</a>
 					<?php if ( $image_gallery ) : unset($image_gallery[0]); ?>
@@ -557,7 +559,7 @@ if ( ! function_exists( 'orcp_prefix_load_grid' ) ) :
 			<div class="fullwidth-row row collapse">
 
 				<div class="small-12 columns">
-					<a href="<?php the_field( 'orcp_instagram_link', 'option' ); ?>" class="instagram-box" target="_blank">
+					<a href="#" class="instagram-box">
 						<section class="grid-section-item" style="background: <?php the_field( 'color_scheme_instagram_bg', $color_scheme_id ); ?>;"></section>
 					</a>
 				</div>
@@ -566,7 +568,9 @@ if ( ! function_exists( 'orcp_prefix_load_grid' ) ) :
 						<section class="grid-section-item"  style="background: <?php the_field( 'color_scheme_outlook_decoding_bg', $color_scheme_id ); ?>; color: <?php the_field( 'color_scheme_outlook_decoding_text', $color_scheme_id ); ?>;">
 							<div class="grid-inner">
 								<?php /*<h2 class="uppercase section-title"><?php _e( 'Outlook Decoding', 'orcp' ); ?></h2><br>*/ ?>
-								<p class="section-description"><?php printf( __( 'Volume No.%s', 'orcp' ), $active_grid_project_no ); ?></p>
+								<p class="section-description">
+                                    <span id="blueprint"><?php printf( __( 'BLUEPRINT NO.1', 'orcp' ), $active_grid_project_no ); ?></span>
+                                </p>
 							</div>
 						</section>
 					</a>
