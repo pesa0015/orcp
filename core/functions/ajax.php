@@ -578,7 +578,7 @@ if ( ! function_exists( 'orcp_prefix_load_grid' ) ) :
 					</a>
 				</div>
 				<div class="small-12 columns">
-					<a href="<?php echo $video_url; ?>" class="swipebox">
+					<a href="<?php echo $video_url; ?>" class="swipebox-video">
 						<section class="grid-section-item"  style="background: <?php the_field( 'color_scheme_outlook_decoding_bg', $color_scheme_id ); ?>; color: <?php the_field( 'color_scheme_outlook_decoding_text', $color_scheme_id ); ?>;">
 							<div class="grid-inner">
 								<?php /*<h2 class="uppercase section-title"><?php _e( 'Outlook Decoding', 'orcp' ); ?></h2><br>*/ ?>

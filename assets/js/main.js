@@ -344,6 +344,11 @@ jQuery(function() {
     }
   });
 
+  jQuery('.swipebox-video').swipebox({
+    removeBarsOnMobile: false,
+    hideBarsDelay: 0
+  });
+
 });
 
 // var headerSection = jQuery('.logo, .store-navigation');
