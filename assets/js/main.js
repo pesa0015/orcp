@@ -23,6 +23,24 @@ function isMobile() {
 
 var mobile = isMobile();
 
+var flexslider = jQuery('.flexslider ul.slides');
+
+jQuery.ajax({
+    type: 'POST',
+    url: orcp.ajaxurl,
+    data: {
+        "action": "load-project-images"
+    },
+    success: function(images) {
+        jQuery.each(images, function(index, value){
+            jQuery(flexslider).append('<li><a href="' + value.url + '"  class="swipebox"><img src="' + value.url + '"></a></li>');
+        });
+        jQuery('.flexslider').flexslider({
+            initDelay: 5000
+        });
+    }
+});
+
 // jQuery('#section-intro').swipebox({
 //     initialIndexOnArray: 1,
 //     beforeOpen: function() {
@@ -135,7 +153,7 @@ if (document.contains(document.getElementById('section-intro'))) {
     scrollBar: true,
     autoScrolling: false,
     controlArrows: false,
-    paddingTop: '5rem',
+    // paddingTop: '5rem',
     paddingBottom: '4rem',
     afterLoad: function(anchorLink, index) {
 

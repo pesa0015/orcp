@@ -54,6 +54,34 @@ a#swipebox-next {
 #blueprint {
     border-bottom: 1px solid #000000;
 }
+// .flexslider .slides > li {
+//     background-image: url(http://www.o-r-c-p.com/wp-content/uploads/2017/08/landnningssida23.jpg);
+// }
+// .flexslider .slides > li {}
+@media only screen and (min-width: 600px) {
+    .flexslider .slides img {
+        height: 100vh;
+    }
+}
+.flex-direction-nav {
+    display: none;
+}
+.flex-control-paging {
+
+}
+.flex-control-paging li {
+    background: #FFFFFF;
+}
+.flex-control-paging li a {
+    width: 15px;
+    height: 15px;
+    background: rgba(0,0,0,.2);
+}
+.flex-control-nav {
+    bottom: 0;
+    z-index: 2;
+    padding: 0;
+}
 
 @media only screen and (min-width: 1301px) {
     .product-item-images {
@@ -85,9 +113,9 @@ a#swipebox-next {
         bottom: 0;
     }
     /* End testing */
-    .section.fp-section.fp-table.active {
-        padding-top: 100px;
-    }
+    // .section.fp-section.fp-table.active {
+    //     padding-top: 100px;
+    // }
     .product-item-facts-btn, .mobile {
         /*margin: 0 0 1rem 0;float: none;width: 100%;text-align: center;*/
         display: none;
@@ -221,6 +249,14 @@ a#swipebox-next {
     a#swipebox-prev, a#swipebox-next {
         background-size: 50px;
     }
+    .flex-control-paging li a {
+        width: 5px;
+        height: 5px;
+        background: rgba(0,0,0,.2);
+    }
+    .flex-control-nav li {
+        margin: 0 3px;
+    }
 }
 
 @media only screen and (max-width: 767px) and (orientation: portrait) {
@@ -233,6 +269,12 @@ a#swipebox-next {
     .store-navigation {
         display: none;
     }
+    .flex-control-nav {
+        background: transparent;
+        bottom: -10px;
+        z-index: 2;
+        padding: 5px 0 0 0;
+    }
 }
 
 @media only screen and (max-width: 767px) and (orientation: landscape) {
@@ -241,6 +283,12 @@ a#swipebox-next {
     }
     .store-navigation {
         display: none;
+    }
+    .flex-control-nav {
+        background: transparent;
+        bottom: -10px;
+        z-index: 2;
+        padding: 5px 0 0 0;
     }
 }
 
