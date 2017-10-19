@@ -520,6 +520,21 @@ if ( ! function_exists( 'orcp_custom_text' ) ) :
 
 endif;
 
+    add_action( 'wp_ajax_nopriv_load-project-images', 'orcp_intro_images' );
+    add_action( 'wp_ajax_load-project-images', 'orcp_intro_images' );
+
+if ( ! function_exists( 'orcp_intro_images' ) ) :
+
+    function orcp_intro_images () {
+        $images = get_term_by('slug', 'project-1', 'orcp_projects');
+        $image_gallery = get_field( 'project_floating_illusions', $images);
+
+        wp_send_json($image_gallery);
+        die();
+    }
+
+endif;
+
 if ( ! function_exists( 'orcp_prefix_load_grid' ) ) :
 
 	function orcp_prefix_load_grid () {
